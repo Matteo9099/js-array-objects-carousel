@@ -36,18 +36,22 @@ let active = 1;
 
 
 for(let i=0; i<items.length; i++){
-
-    // console.log(items[1]);
-    const oggettoAttuale = items[i];
-   console.log(oggettoAttuale);
-
+    item += `
+        <div class="item">
+            <img src="${items[i].photo}" alt="">
+            <div class="text">
+                <h3>${items[i].title}</h3>
+                <p>${items[i].text}</p>
+            </div>
+        </div>`
+    thumb += `
+        <div class="thumb">
+            <img src="${items[i].photo}" alt="">
+        </div>
+    `
 }
 
-
-
-
-
-
+console.log(items);
 
 itemsRef.innerHTML = item;
 document.getElementsByClassName('item')[active].classList.add('active');
